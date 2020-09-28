@@ -1793,7 +1793,8 @@ public class ExternalDocument {
         // Write  General Tournament Info
         try {
             output.write("Tourney\t" + gps.getName() + ", " + gps.getLocation() + "\n");
-            output.write("\tstart=" + new SimpleDateFormat("yyyy-MM-dd").format(gps.getBeginDate()) + "\n");
+            output.write("location='" + gps.getLocation() + "'\n");
+	    output.write("\tstart=" + new SimpleDateFormat("yyyy-MM-dd").format(gps.getBeginDate()) + "\n");
             output.write("\tfinish=" + new SimpleDateFormat("yyyy-MM-dd").format(gps.getEndDate()) + "\n");
             output.write("PLAYERS\n");
         } catch (IOException ex) {
