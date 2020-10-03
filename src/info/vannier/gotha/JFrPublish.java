@@ -646,7 +646,8 @@ public class JFrPublish extends javax.swing.JFrame {
         }
         if (nbPWithoutId > 0) {
             String strPrompt = "" + nbPWithoutId + " players have no AGA Id."
-            + "\nOpenGotha will generate dummy AGA Ids in the \"99xxx\" range.";
+            + "\nOpenGotha will generate dummy AGA Ids in the \"99xxx\" range."
+            + "\nYou must have valid AGA memberships before it will be rated.";
             int response = JOptionPane.showConfirmDialog(this, strPrompt, "Message", JOptionPane.OK_CANCEL_OPTION);
 
             if (response == JOptionPane.CANCEL_OPTION) {
