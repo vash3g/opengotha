@@ -81,7 +81,7 @@ public class Player implements java.io.Serializable{
         if (country.length() == 1 || country.length() > 2) throw new PlayerException("Country name should either have 2 characters\n"
                 + "or be absent");
         this.country = country;
-        if (club.length() > 4) throw new PlayerException("Club name should have at most 4 character");
+        if (club.length() > 50) throw new PlayerException("Club name should have at most 50 characters");
         this.club = club;
         this.egfPin = egfPin;
         this.ffgLicence = ffgLicence;  
