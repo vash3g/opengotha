@@ -81,7 +81,7 @@ public class Player implements java.io.Serializable{
         if (country.length() == 1 || country.length() > 2) throw new PlayerException("Country name should either have 2 characters\n"
                 + "or be absent");
         this.country = country;
-        if (club.length() > 50) throw new PlayerException("Club name should have at most 50 characters");
+        // if (club.length() > 50) throw new PlayerException("Club name should have at most 50 characters");
         this.club = club;
         this.egfPin = egfPin;
         this.ffgLicence = ffgLicence;  
@@ -171,7 +171,7 @@ public class Player implements java.io.Serializable{
 //        String strGr = this.getStrGrade();
         String strRk = Player.convertIntToKD(this.getRank());
         String strCo = Gotha.leftString(this.getCountry(), 2);
-        String strCl = Gotha.leftString(this.getClub(), 4);
+        String strCl = Gotha.leftString(this.getClub(), 10);
 
 //        boolean bRk = dpps.isShowPlayerRank();
         boolean bGr = dpps.isShowPlayerRank();

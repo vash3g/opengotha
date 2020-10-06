@@ -37,7 +37,7 @@ public class TournamentPrinting implements Printable {
     static final int PL_COUNTRY_BEG = PL_NF_BEG + PL_NF_LEN + 1;
     static final int PL_COUNTRY_LEN = 2;
     static final int PL_CLUB_BEG = PL_COUNTRY_BEG + PL_COUNTRY_LEN + 1;
-    static final int PL_CLUB_LEN = 4;
+    static final int PL_CLUB_LEN = 10;
     static final int PL_RANK_BEG = PL_CLUB_BEG + PL_CLUB_LEN + 1;
     static final int PL_RANK_LEN = 3;
     static final int PL_GRADE_BEG = PL_RANK_BEG;
@@ -62,7 +62,7 @@ public class TournamentPrinting implements Printable {
     static final int TL_COUNTRY_BEG = TL_NF_BEG + TL_NF_LEN + 1;
     static final int TL_COUNTRY_LEN = 2;
     static final int TL_CLUB_BEG = TL_COUNTRY_BEG + TL_COUNTRY_LEN + 1;
-    static final int TL_CLUB_LEN = 4;
+    static final int TL_CLUB_LEN = 10;
     static final int TL_RATING_BEG = TL_CLUB_BEG + TL_CLUB_LEN + 1;
     static final int TL_RATING_LEN = 4;
     static final int TL_MEMBER_BEG = TL_RATING_BEG + TL_RATING_LEN + 1;
@@ -814,7 +814,7 @@ public class TournamentPrinting implements Printable {
             g.drawString(strCountry, x, y);
 
             String strClub = player.getClub();
-            strClub = Gotha.leftString(strClub, 4);
+            strClub = Gotha.leftString(strClub, 10);
             x = usableX + usableWidth * PL_CLUB_BEG / PL_NBCAR;
             g.drawString(strClub, x, y);
 
